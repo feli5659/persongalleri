@@ -8,6 +8,17 @@
     <title>Filtrering</title>
   </head>
   <body>
+    <header>
+      <h1>Alle</h1>
+      <nav>
+        <!-- data attribut gør filtrering af indhold muligt -->
+        <button data-troende="alle" class="valgt">ALLE</button>
+        <button data-troende="ja">TROENDE</button>
+        <button data-troende="nej">IKKE-TROENDE</button>
+        <button data-troende="tvivler">TVIVLER</button>
+      </nav>
+    </header>
+
     <main id="holder"></main>
 
     <template>

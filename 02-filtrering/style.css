@@ -11,3 +11,23 @@ article {
 img {
   max-width: 100%;
 }
+
+nav {
+  display: flex;
+  place-content: center;
+  padding-block: 30px;
+  gap: 20px;
+}
+
+button {
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.valgt {
+  background-color: olivedrab;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

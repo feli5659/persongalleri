@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Filtrering</title>
+  </head>
+  <body>
+    <header>
+      <h1>Alle</h1>
+      <nav>
+        <!-- data attribut gør filtrering af indhold muligt -->
+        <button data-troende="alle" class="valgt">ALLE</button>
+        <button data-troende="ja">TROENDE</button>
+        <button data-troende="nej">IKKE-TROENDE</button>
+        <button data-troende="tvivler">TVIVLER</button>
+      </nav>
+    </header>
+    <section id="popop">
+      <div id="luk">LUK</div>
+      <article class="pop_article">
+        <h2></h2>
+        <img src="" alt="" />
+        <h3>Titel:</h3>
+        <p>Email:</p>
+        <p>Fødselsdag:</p>
+        <p>Hobby:</p>
+        <p>Troende:</p>
+      </article>
+    </section>
+    <main id="holder"></main>
+
+    <template>
+      <article>
+        <img class="billede" src="" alt="" />
+        <h2 class="navn"></h2>
+        <p class="efternavn"></p>
+        <p class="hobby"></p>
+      </article>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
