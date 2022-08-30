@@ -17,7 +17,7 @@ function filtrerPersoner() {
   filter = this.dataset.troende; //sæt variabel "filter" til værdien af data-troende på den knap der er klikket på
   document.querySelector(".valgt").classList.remove("valgt"); //fjern klassen valgt fra den knap
   this.classList.add("valgt"); //marker den knap der er klikket på
-  vis(json); // kald funktionen vis(json) efter nye filter er sat
+  vis(); // kald funktionen vis(json) efter nye filter er sat
   header.textContent = this.textContent;
 }
 
@@ -28,7 +28,9 @@ async function hentData() {
   vis();
 }
 
-// hentData();
+document.querySelector("#luk").addEventListener("click", () => (popop.style.display = "none"));
+
+// hentData(); - denne er ikke aktiv da jeg har lavet en DOMContentLoaded
 //finktionen der viser personer i liste view
 function vis() {
   console.log(json);
@@ -45,7 +47,20 @@ function vis() {
       klon.querySelector(".navn").textContent = person.fornavn;
       klon.querySelector(".efternavn").textContent = person.efternavn;
       klon.querySelector(".hobby").textContent = person.hobby;
+      klon.querySelector("article").addEventListener("click", () => visDetaljer(person));
       main.appendChild(klon);
     }
   });
+}
+
+function visDetaljer(person) {
+  console.log(person);
+  popop.style.display = "block";
+  popop.querySelector("img").src = "faces/" + person.billede;
+  popop.querySelector("h2").textContent = person.fornavn + " " + person.efternavn;
+  popop.querySelector(".titel").textContent = person.titel;
+  popop.querySelector(".email").textContent = person.email;
+  popop.querySelector(".fdag").textContent = person.fødselsdag.slice(0, 10);
+  popop.querySelector(".hobby").textContent = person.hobby;
+  popop.querySelector(".tro").textContent = person.tro;
 }
