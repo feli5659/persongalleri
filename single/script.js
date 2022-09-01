@@ -53,6 +53,6 @@ function vis() {
   });
 }
 
-visDetaljer (person) {
+function visDetaljer(person) {
   location.href = `personliste-singleview.html?id=${person._id}`;
 }
